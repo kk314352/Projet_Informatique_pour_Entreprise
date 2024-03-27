@@ -1,0 +1,26 @@
+name: Indices zip
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  indices:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2 
+
+      - name: Installation de zip 
+        run: sudo apt-get install zip
+
+      - name: Zip des indices 
+        run: zip -r indices.zip indices/  
+
+      - name: Telecharger ZIP
+        uses: actions/upload-artifact@v2
+        with:
+          name: les-indices
+          path: indices.zip
