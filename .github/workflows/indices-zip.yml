@@ -32,4 +32,4 @@ jobs:
       - name: commit and push
          run:|
           git commit -m " Ajout de l'archive indices.zip "
-          git push origin main
+          git push
