@@ -2,30 +2,25 @@ name: Indices zip
 
 on:
   push:
-    branches: [main] 
+    branches:
+      - main 
 
 jobs:
-  build:
+  indices:
     runs-on: ubuntu-latest 
 
     steps:
       - name: Clone repository
         uses: actions/checkout@v2 
 
-      - name: Création de l'archive
-        uses: montudor/action-zip@v1
+      - name: Installation de zip 
+        run: sudo apt-get install zip
+
+      - name: Zip des indices 
+        run: zip -r indices.zip indices/  
+
+      - name: Telecharger ZIP
+        uses: actions/upload-artifact@v2
         with:
-          args: zip -r indices.zip indices/  
-
-      - name:  Ajout du fichier indices.md
-        run: |
-          git add indices.zip
-
-      - name: configuration
-        run: |
-            git config user.name " Action Github "
-            git config user.email "<>"
-      - name: commit and push
-         run:|
-          git commit -m " Ajout de l'archive indices.zip "
-          git push origin main
+          name: les-indices
+          path: indices.zip
