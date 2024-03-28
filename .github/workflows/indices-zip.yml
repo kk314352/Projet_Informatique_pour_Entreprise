@@ -12,9 +12,6 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v2 
 
-      - name: Installation de zip 
-        run: sudo apt-get install zip
-        
       - name: Création de l'archive
         uses: montudor/action-zip@v1
         with:
@@ -31,4 +28,4 @@ jobs:
       - name: commit and push
          run:|
           git commit -m " Ajout de l'archive indices.zip "
-          git push
+          git push origin main
