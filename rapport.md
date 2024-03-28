@@ -3,7 +3,8 @@ Kra Kouamé Gérard
 
 ## Adresse github ##
 https://github.com/kk314352/Projet
-# Les commande
+# Les commande pour trouver les indices
+## Pour trouver l'indice 2
 ```bash
 cd projet
 cd ~/tresor_shell/
