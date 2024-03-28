@@ -4,7 +4,7 @@ Kra Kouamé Gérard
 ## Adresse github ##
 https://github.com/kk314352/Projet
 # Les commande
-```
+```bash
 52  sudo apt install python 3.9
    53  sudo apt install python3.9
    54  python3 -v
@@ -19,4 +19,4 @@ https://github.com/kk314352/Projet
    63  mkdir projet
    64  ls
    65  cd projet
-```bash
+```
