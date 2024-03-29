@@ -2029,6 +2029,5 @@ kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/42812$ cat indice
                          |_____|        |_____|
 ```
 ## Le fichier image qui m'a permis de trouver l'indice 8 est le suivant
-```bash
+
 ![Mon chat](chat.jpg)
-```
