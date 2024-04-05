@@ -2083,6 +2083,6 @@ kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/42812$ cat indice
                          |     /        |     /     ~-.     `-. _  _  _
                          |_____|        |_____|
 ```
-## L'image ci-dessous est issue du fichier image qui m'a permis de trouver l'indice 8:
+## L'image ci-dessous est issue du fichier `image` qui m'a permis de trouver l'indice 8:
 
 ![Mon chat](chat.jpg)
