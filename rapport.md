@@ -4,7 +4,7 @@ Kra Kouamé Gérard
 ## Adresse github ##
 L'adresse de mon dépôt github est le suivant:
 
-https://github.com/kk314352/Projet
+git@github.com:kk314352/Projet.git
 # Les commande pour trouver les indices
 Les commandes ci-dessous montrent la procédure que j'ai suivi pour retrouver les bons indices au fur et à mésure de ma *chasse au tresore* dans le terminal.
 Mais avant cela, j'avais d'abord vérifiez que python3 est bien installé dans mon environnement de travail par la commande `python3 -V`.
