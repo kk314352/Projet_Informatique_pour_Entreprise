@@ -6,7 +6,7 @@ L'adresse de mon dépôt github est le suivant:
 
 git@github.com:kk314352/Projet_Informatique_pour_Entreprise.git
 # Les commande pour trouver les indices
-Les commandes ci-dessous montrent la procédure que j'ai suivi pour retrouver les bons indices au fur et à mésure de ma *chasse au tresore* dans le terminal.
+Les commandes ci-dessous montrent la procédure que j'ai suivi pour retrouver les bons indices au fur et à mésure de ma *"chasse au tresore"* dans le terminal.
 Mais avant cela, j'avais d'abord vérifiez que python3 est bien installé dans mon environnement de travail par la commande `python3 -V`.
 Ensuite, j'avais installé quelques outils nécessaire pour récupérer et extraire l’archive par les commandes suivantes : 
 ```
@@ -17,8 +17,10 @@ En fin, j'ai exécuté le code ci-dessous pour télécharger les réssources né
 ```
 sh <(wget -q https://upinfo.univ-cotedazur.fr/assets/im/tresor-shell/getprojet.sh -O -)
 ```
+
 ## 1. Pour trouver l'indice 2
-Ici, d'après les indications fournis dans l'indice 1 et vu que j'avais stocké les fihiers téléchargés ci-dessus dans mon repertoire `/home`, j'ouvre le terminal et je rentre directement dans le répertoire `/tresor_shell`. C'est le répertoire qui contient  le fichier `indices`(qui regroupes tous les indices). Ensuite, je suis la procédure indiqué dans l'indice 1 pour retrouver l'indice 2. C'est ce que les commandes ci-dessous traduisent.
+Pour commencer, je devais exécuter la commande suivante `./generer_probleme.py 33690` pour générer le problème (car `33690` est mon numéro secret), mais pour une raison que j'ignore, cela ne marchait pas. Et donc, j'ai du remplacer `./generer_probleme.py 33690` par `python3 generer_probleme.py 33690`.\
+Aussi, d'après les indications fournies dans l'indice 1 et vu que j'avais stocké les fihiers téléchargés ci-dessus dans mon repertoire `/home`, j'ouvre le terminal et je rentre directement dans le répertoire `/tresor_shell`. C'est le répertoire qui contient  le fichier `indices`(qui regroupes tous les indices). Ensuite, je suis la procédure indiqué dans l'indice 1 pour retrouver l'indice 2. C'est ce que les commandes ci-dessous traduisent.
 ```bash
 kra231@DESKTOP-IPCC9HB:~$ cd ~/tresor_shell/
 kra231@DESKTOP-IPCC9HB:~/tresor_shell$ python3 generer_probleme.py 33690
@@ -29,7 +31,8 @@ indice
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/12345$ cat indice
 ```
 ## 2. Pour trouver l'indice 3
-En s'inspirant toujour de la description de la procédure pour trouver l'indice 3 (contenu dans le fichier indice 2), je sors complètement du fichier `/tresor_shell` et je rentre dans le répertoire `/usr` et à l'aide de la commande `ls | wc -l` je compte les sous répertoire et j'obtiens 12. Cela me permet ensuite de retrouver mon indice suivant (indice 3). Les commandes ci-dessous montrent le détail complet.
+En s'inspirant toujour de la description de la procédure pour trouver l'indice 3 (contenu dans le fichier indice 2), je sors complètement du fichier `/tresor_shell` et je rentre dans le répertoire `/usr` et à l'aide de la commande `ls | wc -l` je compte les sous répertoire et j'obtiens 12.\
+Cela me permet ensuite de retrouver mon indice suivant (indice 3). Les commandes ci-dessous montrent le détail complet.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/12345$ cd ../..
 kra231@DESKTOP-IPCC9HB:~/tresor_shell$ cd ../..
@@ -48,7 +51,7 @@ kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/93323$ cat indice
 ```
 
 ## 3. Pour trouver l'indice 4
-Ici, vu que l'indication décrite dans le fichier précédent me disait que l'indication vers l'indice 4 est le nom de mon ordinateur, j'utilise donc la commande `hostname` pour trouver le nom (Je pouvais le faire sans commande, juste en regardant `kra231@DESKTOP-IPCC9HB`). Cela me permet de retrouver l'indice 4 en procédent de façon similaire que précédemment. C'est ce que décrit les commandes ci-dessous.
+Ici, vu que l'indication décrite dans le fichier précédent me disait que l'indication vers l'indice 4 est le nom de mon ordinateur, j'utilise donc la commande `hostname` pour trouver le nom *(je pouvais le faire sans commande, juste en regardant `kra231@DESKTOP-IPCC9HB`)*. Cela me permet de retrouver l'indice 4 en procédent de façon similaire que précédemment. C'est ce que décrit les commandes ci-dessous.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/93323$ cd ..
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices$ cd ..
@@ -63,7 +66,8 @@ kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/58792$ cat indice
 ```
 
 ## 4. Pour trouver l'indice 5
-Ici, j'exécute d'abord `man mv` et je remarque que c'est l'option `-n` qui  empêche l'écrasement. Ainsi donc, je suis la procédure indiquée dans le fichier précédent et j'obtient l'indice 5. Cela se vois de façon détaillée par les commandes ci-dessous.
+Ici, j'exécute d'abord `man mv` pour voir le manuel de la comande `mv` et je remarque que c'est l'option `-n` qui  empêche l'écrasement.\
+Ainsi donc, je suis la procédure indiquée dans le fichier précédent et j'obtient l'indice 5. Cela se vois de façon détaillée par les commandes ci-dessous.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/58792$ man mv
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/58792$ cd ../..
@@ -75,9 +79,10 @@ indice
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/49137$ cat indice
 ```
 ## 5. Pour trouver l'indice 6
-D'après l'indication dans le fichier précédent, dans le répertoire `~/tresor_shell`, il y a une *cachette*, que je dois
+D'après l'indication dans le fichier précédent, dans le répertoire `~/tresor_shell`, il y a une *"cachette"*, que je dois
 explorer. En particulier, il me faut chercher un fichier `penguin`. Ainsi, je trouverai l'indication vers le prochain indice.
-Donc, j'exécute `ls -d .*` dans le répertoire `~/tresor_shell` ce qui me permet de retrouver le fichier *.cachette*. Ensuite, je rentre dans ledit fichier puis j'exécute à nouveau `ls -d .*` . Ce qui me permet de retrouver le  fichier `penguin`. En fin, par le même principe de recherche, je retrouve l'indice 6.
+Donc, j'exécute la commande `ls -d .*` dans le répertoire `~/tresor_shell` ce qui me permet de retrouver le fichier *.cachette*.\
+Ensuite, je rentre dans ledit fichier puis j'exécute à nouveau la commande `ls -d .*` . Ce qui me permet de retrouver le  fichier `penguin`. En fin, par le même principe de recherche, je retrouve l'indice 6.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/49137$ cd ../..
 kra231@DESKTOP-IPCC9HB:~/tresor_shell$ ls -d .*
@@ -99,7 +104,7 @@ kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/80539$ cat indice
 ## 6. Pour trouver l'indice 7
 Selon l'indication dans le fichier pécédent, la variable `PATH` dit à l'ordinateur où sont les programmes. Chaque chemin qui
 peut contenir un programme est placé entre deux points. L'indication vers le
-prochain indice est le premier chemin listé dans votre `PATH`.
+prochain indice est le premier chemin listé dans votre `PATH`.\
 Ainsi, je fais `echo $PATH` dans mon répertoire `/home`, ce qui me permet d'obtenir `/usr/local/sbin`. En appliquant donc la consigne comme décrite, je retrouve l'indice 7
 
 ```bash
@@ -116,11 +121,11 @@ indice
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/68416$ cat indice
 ```
 ## 7. Pour trouver l'indice 8
-De façon similaire, l'indication donnée dans le fichier précédent dit que le répertoires `images` contient des fichiers images en apparence tout à fait
-normaux. Mais un message secret a été caché dans leur cinq dernières lignes.
-L'indication vers l'indice 8 est formé à partir du dernier mot de chacune de ces lignes pour le fichier `chat.jpg`.
-Ainsi donc, je me place dans le répertoire `/tresor_shell/images` et je fais `ls` ce qui me permet de voir le fichier `chat.jpg`. Je l'ouvre ensuite par lacommande `gedit chat.jpg`. Ensuite je récopie donc le dernier mot de chacune de ces cinq dernières lignes. J'obtiens donc, `surprisesattentivessilencenom` car le fichier ne contient rien sur la première des cinq dernières lignes, a *surprises* en fin de la seconde, a *attentives* en fin de la troisième, *silence* en fin de la quatrième et *nom* en fin de la cinquième.
-Par suite, je me place dans le répertoire `/tresor_shell` et j'exécute python3 indice_suivant.py 8 surprisesattentivessilencenom ce qui me permet de retrouver le numéro de l'indice 8.
+De façon similaire, l'indication donnée dans le fichier précédent dit que le répertoire `images` contient des fichiers images en apparence tout à fait
+normaux. Mais un message secret a été caché dans leur cinq dernières lignes.\
+L'indication vers l'indice 8 est formé à partir du dernier mot de chacune de ces lignes pour le fichier `chat.jpg`.\
+Ainsi donc, je me place dans le répertoire `/tresor_shell/images` et je fais `ls` ce qui me permet de voir le fichier `chat.jpg`. Je l'ouvre ensuite par lacommande `gedit chat.jpg`. Ensuite je récopie donc le dernier mot de chacune de ces cinq dernières lignes. J'obtiens donc, `surprisesattentivessilencenom` car le fichier ne contient rien *(espace vide)* sur la première des cinq dernières lignes, a **surprises** en fin de la seconde, a **attentives** en fin de la troisième, **silence** en fin de la quatrième et **nom** en fin de la cinquième.\
+Par suite, je me place dans le répertoire `/tresor_shell` et j'exécute `python3 indice_suivant.py 8 surprisesattentivessilencenom` ce qui me permet de retrouver le numéro de l'indice 8.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/68416$ cd ../..
 kra231@DESKTOP-IPCC9HB:~/tresor_shell$ ls
@@ -143,12 +148,12 @@ indice
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/74744$ cat indice
 ```
 ## 8. Pour trouver l'indice 9
-Ici, en suivant les indications du fichier précédent, je me place dans le réperoire `/tresor_shell` et je crée le fichier `toutpuissant.txt` qui contient le texte
+Ici, en suivant les indications du fichier précédent, je me place dans le réperoire `/tresor_shell` et je crée le fichier `toutpuissant.txt` qui contient le texte ci-dessous:
     ```
     Je veux utiliser sudo.
     MP
     ```
-    De plus, je modifie *MP* par mes initiales *KKG* à l'aide de la commande `gedit toutpuissant.txt`. Esuite, je le déplace dans le répertoire `/usr/local` par la commande `sudo mv toutpuissant.txt /usr/local`. Après authentification, je vérifie si ma commande a marché. En fin, je me place dans le réperoire `/tresor_shell` puis j'exécute `python3 indice_suivant.py 9 KKG`, ce qui me permet de trouver le numéro de l'indice 9.
+    De plus, je modifie **MP** par mes initiales **KKG** à l'aide de la commande `gedit toutpuissant.txt`. Esuite, je le déplace dans le répertoire `/usr/local` par la commande `sudo mv toutpuissant.txt /usr/local`. Après authentification, je vérifie si ma commande a marché. En fin, je me place dans le réperoire `/tresor_shell` puis j'exécute `python3 indice_suivant.py 9 KKG`, ce qui me permet de trouver le numéro de l'indice 9.
     
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/74744$ cd ../..
@@ -182,7 +187,7 @@ kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/14971$ cat indice
 ```
 
 ## 9. Pour trouver l'indice 10
-Ici, je me place d'abord dans le répertoire `/usr/share/dict`. Ensuite, je vérifie l'aide de la commande `grep` par `man grep` puis je vérifie que le fichier `words` (c'est un fichier qui sert de dictionnaire pour la correction orthographique) est bien disponible et en fin, je compte le nombre de mots dans ce dictionnaire par la commande `wc words` . Je trouve donc, *10 104334 mots*. De là, je me place dans le répertoire `/tresor_shell` et j'exécute `python3 indice_suivant.py 10 104334`, ce qui me donne le numéro de l'indice 10.
+Ici, je me place d'abord dans le répertoire `/usr/share/dict`. Ensuite, je vérifie le manuel de la commande `grep` par `man grep` puis je vérifie que le fichier `words` (c'est un fichier qui sert de dictionnaire pour la correction orthographique) est bien disponible et en fin, je compte le nombre de mots dans ce dictionnaire par la commande `wc words` . Je trouve donc, **10 104334** mots. De là, je me place dans le répertoire `/tresor_shell` et j'exécute `python3 indice_suivant.py 10 104334`, ce qui me donne le numéro de l'indice 10.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/14971$ cd ../..
 kra231@DESKTOP-IPCC9HB:~/tresor_shell$ cd ../..
@@ -202,8 +207,8 @@ indice
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/13801$ cat indice
 ```
 ## 10. Pour trouver l'indice 11
-Pour trouver l'indice 11, la consigne dit que l'indication suivante est le mot qui apparaît avant *"baobab"* dans `/usr/share/dict/words`. 
-Je me place donc dans le répertoire `/usr/share/dict`. De là, à l'aide de l'option *-B* de la commande `grep`, j'exécute `grep -B 1 "baobab" words`. Cela me permet d'identifier *"banyans"*. C'est le mot qui apparaît avant *"baobab"* dans `/usr/share/dict/words`.
+Pour trouver l'indice 11, la consigne dit que l'indication suivante est le mot qui apparaît avant *"baobab"* dans `/usr/share/dict/words`.\ 
+Je me place donc dans le répertoire `/usr/share/dict`. De là, à l'aide de l'option `-B` de la commande `grep`, j'exécute `grep -B 1 "baobab" words`. Cela me permet d'identifier *"banyans"*. C'est le mot qui apparaît avant *"baobab"* dans `/usr/share/dict/words`.\
 En fin, Je me place donc dans le répertoire `/tresor_shell` et j'exécute la commande `python3 indice_suivant.py 11 banyans`. Ce qui me permet d'obtenir l'indice 11.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/13801$ cd ../..
@@ -227,11 +232,10 @@ indice
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/08538$ cat indice
 ```
 ## 11. Pour trouver l'indice 12
-Sélon la consigne indiquée dans le fichier précédent, je dois utiliser la commande `ls -la /bin/` pour obtenir une grande liste de fichiers. 
-La 5e colonne dans cette liste est la taille des fichiers en octets.
-Après avoir exécuté la commande `ls -la /bin/` depuis le répertoire `/tresor_shell/indices`, je fais `man sort` pour voir les options permettant de trier la 5ème colonne par ordre décroissant d'un tel fihier: je trouve l'option *-nr -k 5*.
-Ensuite, je me met donc dans le répertoire `/bin` et j'exécute la commande qui suit `ls -l | sort -nr -k 5`. Ce qui me permet d'afficher la liste de ces fichiers triés du plus grand au plus petit (par ordre décroissant).
-
+Sélon la consigne indiquée dans le fichier précédent, je dois utiliser la commande `ls -la /bin/` pour obtenir une grande liste de fichiers.\ 
+La 5ème colonne dans cette liste est la taille des fichiers en octets.\
+Après avoir exécuté la commande `ls -la /bin/` depuis le répertoire `/tresor_shell/indices`, je fais `man sort` pour voir les options permettant de trier la 5ème colonne par ordre décroissant d'un tel fihier: je trouve l'option `-nr -k 5`.\
+Ensuite, je me met donc dans le répertoire `/bin` et j'exécute la commande qui suit `ls -l | sort -nr -k 5`. Ce qui me permet d'afficher la liste de ces fichiers triés du plus grand au plus petit *(par ordre décroissant)*.\
 En appliquant l'indication, je me met dans le répertoire `/tresor_shell/` puis j'exécute `python3 indice_suivant.py 12 -nr -k 5`. Cela me fournit le numéro de l'indice 12.
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/08538$ cd ..
@@ -2030,11 +2034,11 @@ indice
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/78217$ cat indice
 ```
 ## 12. Pour trouver l'indice 13
-L'indication pour trouver l'indice 13 dit : "En utilisant tout ce que vous avez appris pour l'instant et le fait que les
-vrais indices sont différents des faux indices, trouver l'indice final !"
+L'indication pour trouver l'indice 13 dit : *"En utilisant tout ce que vous avez appris pour l'instant et le fait que les
+vrais indices sont différents des faux indices, trouver l'indice final !"*
 
-D'abord, l'une des choses que j'ai remarqué lors de ma *chasse au tresor*, c'est que tous les faux indices ont en commun la phrase *"Fausse piste"*.
-Ainsi, vu que j'ai pu retrouver tous les indices sauf le dernier, il est donc évident que c'est le seul fichier parmi les indices qui ne contient pas la phrase *"Fausse piste"*. Donc, j'écris le code suivant `for dossier in indices/*/; do     if ! grep -q "Fausse piste" "$dossier/indice"; then         echo "$dossier";     fi done` depuis le répertoire `/tresor_shell`. Cela me permet de lister tous numéros des bons indices (indices ne contenant pas de phrases *"Fausse piste"*). En fin, je regarde parmi ces numéros et j'identifie facilement que *42812* est le seul numéro que j'ai pas encore utiliser jusque là. je fais donc `cd indices/42812` et je vérifie qu'il est effectivement le bon indice. C'est ainsi que j'obtient l'indice final!
+D'abord, l'une des choses que j'ai remarquée lors de ma *"chasse au tresor"*, c'est que tous les faux indices ont en commun la phrase *"Fausse piste"*.\
+Ainsi, vu que j'ai pu retrouver tous les indices sauf le dernier, il est donc évident que c'est le seul fichier parmi les indices qui ne contient pas la phrase *"Fausse piste"*. Donc, j'écris le code suivant `for dossier in indices/*/; do     if ! grep -q "Fausse piste" "$dossier/indice"; then         echo "$dossier";     fi done` depuis le répertoire `/tresor_shell`. Cela me permet de lister tous numéros des bons indices *(indices ne contenant pas de phrases "Fausse piste")*. En fin, je regarde parmi ces numéros et j'identifie facilement que **42812** est le seul numéro que j'ai pas encore utiliser jusque là. je fais donc `cd indices/42812` et je vérifie qu'il est effectivement le bon indice. C'est ainsi que j'obtient l'indice final!
 ```bash
 kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/78217$ cd ../..
 kra231@DESKTOP-IPCC9HB:~/tresor_shell$ man grep
@@ -2079,6 +2083,6 @@ kra231@DESKTOP-IPCC9HB:~/tresor_shell/indices/42812$ cat indice
                          |     /        |     /     ~-.     `-. _  _  _
                          |_____|        |_____|
 ```
-## Le fichier image qui m'a permis de trouver l'indice 8 est le suivant
+## L'image ci-dessous est issue du fichier image qui m'a permis de trouver l'indice 8:
 
 ![Mon chat](chat.jpg)
