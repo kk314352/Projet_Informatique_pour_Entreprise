@@ -12,7 +12,7 @@ WORKDIR /root/source
 # Copie des fichiers du projet dans le répertoire /root/source
 COPY . /root/source
 
-# Exécution
+# Exécution des étapes nécessaires pour la construction des fichiers cibles
 RUN make -C /root/source all
 
 # Déplacement des fichiers générés HTML vers le répertoire Apache
