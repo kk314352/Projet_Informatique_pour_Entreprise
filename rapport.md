@@ -19,7 +19,7 @@ sh <(wget -q https://upinfo.univ-cotedazur.fr/assets/im/tresor-shell/getprojet.s
 ```
 
 ## 1. Pour trouver l'indice 2
-Pour commencer, je devais exécuter la commande suivante `./generer_probleme.py 33690` pour générer le problème (car `33690` est mon numéro secret), mais pour une raison que j'ignore, cela ne marchait pas. Et donc, j'ai du remplacer `./generer_probleme.py 33690` par `python3 generer_probleme.py 33690`.\
+Pour commencer, je devais exécuter la commande suivante `./generer_probleme.py 33690` pour générer le problème (car `33690` est mon numéro secret), mais pour une raison que j'ignore, cela ne marchait pas. Et donc, j'ai dû remplacer `./generer_probleme.py 33690` par `python3 generer_probleme.py 33690`.\
 Aussi, d'après les indications fournies dans l'indice 1 et vu que j'avais stocké les fihiers téléchargés ci-dessus dans mon repertoire `/home`, j'ouvre le terminal et je rentre directement dans le répertoire `/tresor_shell`. C'est le répertoire qui contient  le fichier `indices`(qui regroupes tous les indices). Ensuite, je suis la procédure indiqué dans l'indice 1 pour retrouver l'indice 2. C'est ce que les commandes ci-dessous traduisent.
 ```bash
 kra231@DESKTOP-IPCC9HB:~$ cd ~/tresor_shell/
