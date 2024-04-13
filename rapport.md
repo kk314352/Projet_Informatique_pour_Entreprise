@@ -2,7 +2,7 @@
 Kra Kouamé Gérard
 
 ## Adresse github ##
-L'adresse de mon dépôt github est le suivant:
+L'adresse de mon dépôt github est la suivante:
 
 git@github.com:kk314352/Projet_Informatique_pour_Entreprise.git
 # Les commande pour trouver les indices
